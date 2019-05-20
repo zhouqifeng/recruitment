@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.admin.mapper.AdminMapper">
+
+    <insert id="addPersonInfo">
+        insert into
+        recruitment.personInfo(
+            sqzw1,sqzw2,
+            sfzh,mz,
+            xm,csnyr,xb,
+            sj,yx,hy,
+            jg,hj,bysgwzw,
+            zgxl,byyx,zy,
+            xz,xw,bynyr,
+            zzmm,rdnyr,jszc,
+            dywyjb,jsjsp,pm,
+            lxdz,jtdz,
+            sg,tz,xqah,
+            jwbs,
+            qzsj1,gzjl1,
+            qzsj2,gzjl2,
+            qzsj3,gzjl3,
+            qzsj4,gzjl4,
+            qzsj5,gzjl5,
+            qzsj6,xxjl6,
+            qzsj7,xxjl7,
+            qzsj8,xxjl8,
+            zmr1,lxfs1,
+            zmr2,lxfs2,
+            ly,
+            srqw,kksgzrq,
+            jsqw,
+            pxqw,
+            fq,gzdw1,lxfs3,
+            mq,gzdw2,lxfs4,
+            xmpo,gzdw3,lxfs5,
+            kgqk,kyqk,
+            zxqs,zxqsxm,
+            sm1,sm2,sm3,
+            msrq,ypgs
+        )
+        values(
+            #{personInfo.sqzw1},#{personInfo.sqzw2},
+            #{personInfo.sfzh},#{personInfo.mz},
+            #{personInfo.xm},#{personInfo.csnyr},#{personInfo.xb},
+            #{personInfo.sj},#{personInfo.yx},#{personInfo.hy},
+            #{personInfo.jg},#{personInfo.hj},#{personInfo.bysgwzw},
+            #{personInfo.zgxl},#{personInfo.byyx},#{personInfo.zy},
+            #{personInfo.xz},#{personInfo.xw},#{personInfo.bynyr},
+            #{personInfo.zzmm},#{personInfo.rdnyr},#{personInfo.jszc},
+            #{personInfo.dywyjb},#{personInfo.jsjsp},#{personInfo.pm},
+            #{personInfo.lxdz},#{personInfo.jtdz},
+            #{personInfo.sg},#{personInfo.tz},#{personInfo.xqah},
+            #{personInfo.jwbs},
+            #{personInfo.qzsj1},#{personInfo.gzjl1},
+            #{personInfo.qzsj2},#{personInfo.gzjl2},
+            #{personInfo.qzsj3},#{personInfo.gzjl3},
+            #{personInfo.qzsj4},#{personInfo.gzjl4},
+            #{personInfo.qzsj5},#{personInfo.gzjl5},
+            #{personInfo.qzsj6},#{personInfo.xxjl6},
+            #{personInfo.qzsj7},#{personInfo.xxjl7},
+            #{personInfo.qzsj8},#{personInfo.xxjl8},
+            #{personInfo.zmr1},#{personInfo.lxfs1},
+            #{personInfo.zmr2},#{personInfo.lxfs2},
+            #{personInfo.ly},
+            #{personInfo.srqw},#{personInfo.kksgzrq},
+            #{personInfo.jsqw},
+            #{personInfo.pxqw},
+            #{personInfo.fq},#{personInfo.gzdw1},#{personInfo.lxfs3},
+            #{personInfo.mq},#{personInfo.gzdw2},#{personInfo.lxfs4},
+            #{personInfo.xmpo},#{personInfo.gzdw3},#{personInfo.lxfs5},
+            #{personInfo.kgqk},#{personInfo.kyqk},
+            #{personInfo.zxqs},#{personInfo.zxqsxm},
+            #{personInfo.sm1},#{personInfo.sm2},#{personInfo.sm3},
+            #{personInfo.msrq},#{personInfo.ypgs}
+        )
+    </insert>
+
+    <update id="updatePersonInfo">
+        update recruitment.personInfo set
+            sqzw1=#{personInfo.sqzw1},sqzw2=#{personInfo.sqzw2},
+            mz=#{personInfo.mz},
+            csnyr=#{personInfo.csnyr},xb=#{personInfo.xb},
+            sfzh=#{personInfo.sfzh},yx=#{personInfo.yx},hy=#{personInfo.hy},
+            jg=#{personInfo.jg},hj=#{personInfo.hj},bysgwzw=#{personInfo.bysgwzw},
+            zgxl=#{personInfo.zgxl},byyx=#{personInfo.byyx},zy=#{personInfo.zy},
+            xz=#{personInfo.xz},xw=#{personInfo.xw},bynyr=#{personInfo.bynyr},
+            zzmm=#{personInfo.zzmm},rdnyr=#{personInfo.rdnyr},jszc=#{personInfo.jszc},
+            dywyjb=#{personInfo.dywyjb},jsjsp=#{personInfo.jsjsp},pm=#{personInfo.pm},
+            lxdz=#{personInfo.lxdz},jtdz=#{personInfo.jtdz},
+            sg=#{personInfo.sg},tz=#{personInfo.tz},xqah=#{personInfo.xqah},
+            jwbs=#{personInfo.jwbs},
+            qzsj1=#{personInfo.qzsj1},gzjl1=#{personInfo.gzjl1},
+            qzsj2=#{personInfo.qzsj2},gzjl2=#{personInfo.gzjl2},
+            qzsj3=#{personInfo.qzsj3},gzjl3=#{personInfo.gzjl3},
+            qzsj4=#{personInfo.qzsj4},gzjl4=#{personInfo.gzjl4},
+            qzsj5=#{personInfo.qzsj5},gzjl5=#{personInfo.gzjl5},
+            qzsj6=#{personInfo.qzsj6},xxjl6=#{personInfo.xxjl6},
+            qzsj7=#{personInfo.qzsj7},xxjl7=#{personInfo.xxjl7},
+            qzsj8=#{personInfo.qzsj8},xxjl8=#{personInfo.xxjl8},
+            zmr1=#{personInfo.zmr1},lxfs1=#{personInfo.lxfs1},
+            zmr2=#{personInfo.zmr2},lxfs2=#{personInfo.lxfs2},
+            ly=#{personInfo.ly},
+            srqw=#{personInfo.srqw},kksgzrq=#{personInfo.kksgzrq},
+            jsqw=#{personInfo.jsqw},
+            pxqw=#{personInfo.pxqw},
+            fq=#{personInfo.fq},gzdw1=#{personInfo.gzdw1},lxfs3=#{personInfo.lxfs3},
+            mq=#{personInfo.mq},gzdw2=#{personInfo.gzdw2},lxfs4=#{personInfo.lxfs4},
+            xmpo=#{personInfo.xmpo},gzdw3=#{personInfo.gzdw3},lxfs5=#{personInfo.lxfs5},
+            kgqk=#{personInfo.kgqk},kyqk=#{personInfo.kyqk},
+            zxqs=#{personInfo.zxqs},zxqsxm=#{personInfo.zxqsxm},
+            sm1=#{personInfo.sm1},sm2=#{personInfo.sm2},sm3=#{personInfo.sm3},
+            ypgs=#{personInfo.ypgs}
+        where xm=#{personInfo.xm} and sj=#{personInfo.sj}
+    </update>
+
+    <select id="selectSfzh" resultType="com.qf.admin.pojo.po.PersonInfo">
+        select * from recruitment.personInfo where sfzh = #{sfzh}
+    </select>
+
+    <select id="selectSfzh2" resultType="java.lang.String">
+        select sfzh from recruitment.personInfo where xm = #{xm} and sj = #{sj}
+    </select>
+
+    <select id="selectUser" resultType="com.qf.admin.pojo.po.User">
+        select xm,sj,msrq,ypgs from recruitment.personInfo where xm = #{u.xm} and sj = #{u.sj}
+    </select>
+
+    <select id="selectSj" resultType="com.qf.admin.pojo.po.PersonInfo">
+        select * from recruitment.personInfo where sj = #{sj}
+    </select>
+
+    <select id="selectAdmin" resultType="com.qf.admin.pojo.po.Admin">
+        select username,password,company from recruitment.admin where username = #{admin.username} and password = #{admin.password}
+    </select>
+
+    <select id="selectSecurity" resultType="com.qf.admin.pojo.vo.Security">
+        select url,code,num from recruitment.admin where username = #{admin.username} and password = #{admin.password}
+    </select>
+
+    <update id="updatePassword">
+        update recruitment.admin set password = #{newpassword} where username = #{username}
+    </update>
+
+    <update id="updateSecurity">
+        update recruitment.admin set url=#{security.url},code=#{security.code},num=#{security.num} where username = #{admin.username} and password = #{admin.password}
+    </update>
+
+    <select id="findPersonInfo" resultType="com.qf.admin.pojo.po.PersonInfo">
+        select
+        *
+        from recruitment.personinfo
+        <where>
+            <if test="search.msrq != null and search.msrq != '' ">
+                and msrq like '%${search.msrq}%'
+            </if>
+            <if test="search.xm != null and search.xm != '' ">
+                and xm like '%${search.xm}%'
+            </if>
+            <if test="search.ypgs != null and search.ypgs != '' ">
+                and ypgs like '%${search.ypgs}%'
+            </if>
+        </where>
+        limit #{pageInfo.offset},#{pageInfo.limit}
+    </select>
+
+    <select id="countPersonInfo" resultType="_long">
+        select
+        count(*)
+        from recruitment.personinfo
+        <where>
+            <if test="search.msrq != null and search.msrq != '' ">
+                and msrq like '%${search.msrq}%'
+            </if>
+            <if test="search.xm != null and search.xm != '' ">
+                and xm like '%${search.xm}%'
+            </if>
+            <if test="search.ypgs != null and search.ypgs != '' ">
+                and ypgs like '%${search.ypgs}%'
+            </if>
+        </where>
+    </select>
+
+    <select id="selectPath" resultType="java.lang.String">
+        select url from recruitment.admin where url = #{path}
+    </select>
+
+    <select id="selectCode" resultType="int">
+        select count(code) from recruitment.admin where code = #{code}
+    </select>
+
+    <select id="selectCode2" resultType="int">
+        select count(code) from recruitment.admin where code = #{code} and username != #{admin.username}
+    </select>
+
+    <select id="searchNum" resultType="int">
+        select COALESCE(max(num),0) as num from recruitment.admin where code = #{code}
+    </select>
+
+    <update id="updateNum">
+        update recruitment.admin set num=num-1 where code = #{code}
+    </update>
+
+    <update id="deletePersonInfo">
+        update recruitment.personinfo set
+            sqzw1='',sqzw2='',
+            mz='',
+            csnyr='',xb='',
+            sfzh='',yx='',hy='',
+            jg='',hj='',bysgwzw='',
+            zgxl='',byyx='',zy='',
+            xz='',xw='',bynyr='',
+            zzmm='',rdnyr='',jszc='',
+            dywyjb='',jsjsp='',pm='',
+            lxdz='',jtdz='',
+            sg='',tz='',xqah='',
+            jwbs='',
+            qzsj1='',gzjl1='',
+            qzsj2='',gzjl2='',
+            qzsj3='',gzjl3='',
+            qzsj4='',gzjl4='',
+            qzsj5='',gzjl5='',
+            qzsj6='',xxjl6='',
+            qzsj7='',xxjl7='',
+            qzsj8='',xxjl8='',
+            zmr1='',lxfs1='',
+            zmr2='',lxfs2='',
+            ly='',
+            srqw='',kksgzrq='',
+            jsqw='',
+            pxqw='',
+            fq='',gzdw1='',lxfs3='',
+            mq='',gzdw2='',lxfs4='',
+            xmpo='',gzdw3='',lxfs5='',
+            kgqk='',kyqk='',
+            zxqs='',zxqsxm='',
+            sm1='',sm2='',sm3=''
+            where sj = #{sj}
+    </update>
+
+    <update id="editPerson">
+        update recruitment.personinfo set xm=#{u.xm},sj=#{u.sj},msrq=#{u.msrq} where xm=#{person.xm} and sj=#{person.sj}
+    </update>
+
+    <update id="addPerson">
+        insert into recruitment.personinfo(xm,sfzh,msrq,ypgs) values(#{u.xm},#{u.sfzh},#{u.msrq},#{u.ypgs})
+    </update>
+</mapper>
