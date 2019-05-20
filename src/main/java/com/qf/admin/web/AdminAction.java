@@ -211,12 +211,17 @@ public class AdminAction {
 
         String strSfzh = adminService.searchSfzh(person.getXm(),person.getSj());
 
-        if(strSfzh == null || strSfzh.equals(sfzh)){
-            return "ok";
-        }
-
         List<PersonInfo> pi = adminService.searchSfzh(sfzh);
 
+        //第一次填但是已经重复
+        if((strSfzh == null || "".equals(strSfzh)) && !pi.isEmpty()){
+            return "error";
+        }
+        //非第一次填，跟原来一样
+        if(sfzh.equals(strSfzh)){
+            return "ok";
+        }
+        //非第一次填，跟原来不一样，跟其他重复
         if(!pi.isEmpty()){
             return "error";
         }
