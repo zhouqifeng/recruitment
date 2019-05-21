@@ -77,7 +77,11 @@ public class AdminAction {
             }
             return "userlogin";
         }else if(path.equals("addPerson")){
-
+            //增加应聘人员页面判断管理员是否登陆
+            Admin admin = (Admin) session.getAttribute("user");
+            if(admin == null){
+                return "login";
+            }
             return "addPerson";
         }
 
