@@ -245,6 +245,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </update>
 
     <update id="addPerson">
-        insert into recruitment.personinfo(xm,sfzh,msrq,ypgs) values(#{u.xm},#{u.sfzh},#{u.msrq},#{u.ypgs})
+        insert into recruitment.personinfo(xm,sj,msrq,ypgs) values(#{u.xm},#{u.sj},#{u.msrq},#{u.ypgs})
     </update>
 </mapper>
