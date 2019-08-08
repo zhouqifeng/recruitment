@@ -152,8 +152,69 @@ public class PersonInfo {
     private String msrq;
     //人力资源
     private int rlzy;
-
+    //提交码
     private String code;
+
+    //职务1(浙农控股)
+    private String zw1;
+    //职务2(浙农控股)
+    private String zw2;
+    //职务3(浙农控股)
+    private String zw3;
+    //职业资格证书(浙农控股)
+    private String zyzgzs;
+    //年级排名(浙农控股)
+    private String pm2;
+    //性格
+    private String xg;
+
+    public String getXg() {
+        return xg;
+    }
+
+    public void setXg(String xg) {
+        this.xg = xg;
+    }
+
+    public String getPm2() {
+        return pm2;
+    }
+
+    public void setPm2(String pm2) {
+        this.pm2 = pm2;
+    }
+
+    public String getZw1() {
+        return zw1;
+    }
+
+    public void setZw1(String zw1) {
+        this.zw1 = zw1;
+    }
+
+    public String getZw2() {
+        return zw2;
+    }
+
+    public void setZw2(String zw2) {
+        this.zw2 = zw2;
+    }
+
+    public String getZw3() {
+        return zw3;
+    }
+
+    public void setZw3(String zw3) {
+        this.zw3 = zw3;
+    }
+
+    public String getZyzgzs() {
+        return zyzgzs;
+    }
+
+    public void setZyzgzs(String zyzgzs) {
+        this.zyzgzs = zyzgzs;
+    }
 
     public String getCode() {
         return code;

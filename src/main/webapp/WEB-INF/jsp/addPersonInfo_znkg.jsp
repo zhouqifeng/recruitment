@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div class="layui-inline">
-                <label class="layui-form-label">出生年月日</label>
+                <label class="layui-form-label">出生年月</label>
                 <div class="layui-input-inline">
                     <input type="text" name="csnyr" id="csnyr" lay-verify="date|required" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
                 </div>
@@ -115,7 +115,7 @@
                 </div>
             </div>
             <div class="layui-inline">
-                <label for="hy" class="layui-form-label">婚育</label>
+                <label for="hy" class="layui-form-label">婚否</label>
                 <div class="layui-input-inline">
                     <input type="text" id="hy" name="hy" lay-verify="required" class="layui-input">
                 </div>
@@ -130,22 +130,13 @@
                 </div>
             </div>
             <div class="layui-inline">
-                <label for="hj" class="layui-form-label">户籍</label>
+                <label for="lxdz" class="layui-form-label">联系地址</label>
                 <div class="layui-input-inline">
-                    <input type="text" id="hj" name="hj" lay-verify="required" class="layui-input">
+                    <input type="text" id="lxdz" name="lxdz" lay-verify="required" class="layui-input">
                 </div>
             </div>
             <div class="layui-inline">
-                <label for="bysgwzw" class="layui-form-label">毕业时职务</label>
-                <div class="layui-input-inline">
-                    <input type="text" id="bysgwzw" name="bysgwzw" class="layui-input">
-                </div>
-            </div>
-        </div>
-
-        <div class="layui-form-item">
-            <div class="layui-inline">
-                <label class="layui-form-label">最高学历</label>
+                <label class="layui-form-label">学历</label>
                 <div class="layui-input-inline">
                     <select name="zgxl" id="zgxl" lay-verify="required">
                         <option value="">请选择</option>
@@ -157,6 +148,15 @@
                         <option value="研究生">研究生</option>
                         <option value="博士">博士</option>
                     </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label for="bysgwzw" class="layui-form-label">学生职务</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="bysgwzw" name="bysgwzw" class="layui-input">
                 </div>
             </div>
             <div class="layui-inline">
@@ -193,7 +193,7 @@
                 </div>
             </div>
             <div class="layui-inline">
-                <label for="bynyr" class="layui-form-label">毕业年月日</label>
+                <label for="bynyr" class="layui-form-label">毕业时间</label>
                 <div class="layui-input-inline">
                     <input type="text" name="bynyr" id="bynyr" lay-verify="date|required" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
                 </div>
@@ -223,13 +223,13 @@
                 </div>
             </div>
             <div class="layui-inline">
-                <label for="rdnyr" class="layui-form-label">入党年月日</label>
+                <label for="zyzgzs" class="layui-form-label">证书</label>
                 <div class="layui-input-inline">
-                    <input type="text" name="rdnyr" id="rdnyr" placeholder="yyyy-MM-dd" class="layui-input">
+                    <input type="text" id="zyzgzs" name="zyzgzs" placeholder="职业资格证书" class="layui-input">
                 </div>
             </div>
             <div class="layui-inline">
-                <label for="jszc" class="layui-form-label">技术职称</label>
+                <label for="jszc" class="layui-form-label">职称</label>
                 <div class="layui-input-inline">
                     <input type="text" id="jszc" name="jszc" class="layui-input">
                 </div>
@@ -249,44 +249,43 @@
                     <input type="text" id="mz" name="mz" lay-verify="required" class="layui-input">
                 </div>
             </div>
-        </div>
-
-        <div class="layui-form-item">
             <div class="layui-inline">
                 <label for="dywyjb" class="layui-form-label">外语级别</label>
                 <div class="layui-input-inline">
                     <input type="text" id="dywyjb" name="dywyjb" placeholder="第一外语级别" class="layui-input">
                 </div>
             </div>
+        </div>
+
+        <div class="layui-form-item">
             <div class="layui-inline">
                 <label for="jsjsp" class="layui-form-label">计算机水平</label>
                 <div class="layui-input-inline">
-                    <input type="text" id="jsjsp" name="jsjsp" placeholder="应届生必填" class="layui-input">
+                    <input type="text" id="jsjsp" name="jsjsp" class="layui-input">
                 </div>
             </div>
             <div class="layui-inline">
-                <label for="pm" class="layui-form-label">成绩排名</label>
+                <label for="pm" class="layui-form-label">班级排名</label>
                 <div class="layui-input-inline">
-                    <input type="text" id="pm" name="pm" placeholder="班级/年级" class="layui-input">
+                    <input type="text" id="pm" name="pm" placeholder="XX/XX" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label for="pm2" class="layui-form-label">年级排名</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="pm2" name="pm2" placeholder="XX/XX" class="layui-input">
                 </div>
             </div>
         </div>
 
         <div class="layui-form-item">
             <div class="layui-inline">
-                <label for="lxdz" class="layui-form-label">联系地址</label>
+                <label for="xg" class="layui-form-label">性格</label>
                 <div class="layui-input-inline">
-                    <input type="text" id="lxdz" name="lxdz" lay-verify="required" class="layui-input">
-                </div>
-            </div>
-            <div class="layui-inline">
-                <label for="jtdz" class="layui-form-label">家庭地址</label>
-                <div class="layui-input-inline">
-                    <input type="text" id="jtdz" name="jtdz" lay-verify="required" class="layui-input">
+                    <input type="text" id="xg" name="xg" lay-verify="required" class="layui-input">
                 </div>
             </div>
         </div>
-
         <div class="layui-form-item">
             <label for="jwbs" class="layui-form-label">既往病史</label>
             <div class="layui-input-block">
@@ -311,9 +310,9 @@
                 </div>
             </div>
             <div class="layui-inline">
-                <label for="lxfs3" class="layui-form-label">联系方式</label>
+                <label for="zw1" class="layui-form-label">职务</label>
                 <div class="layui-input-inline">
-                    <input type="text" id="lxfs3" name="lxfs3" class="layui-input">
+                    <input type="text" id="zw1" name="zw1" class="layui-input">
                 </div>
             </div>
         </div>
@@ -332,9 +331,9 @@
                 </div>
             </div>
             <div class="layui-inline">
-                <label for="lxfs4" class="layui-form-label">联系方式</label>
+                <label for="zw2" class="layui-form-label">职务</label>
                 <div class="layui-input-inline">
-                    <input type="text" id="lxfs4" name="lxfs4" class="layui-input">
+                    <input type="text" id="zw2" name="zw2" class="layui-input">
                 </div>
             </div>
         </div>
@@ -353,15 +352,15 @@
                 </div>
             </div>
             <div class="layui-inline">
-                <label for="lxfs5" class="layui-form-label">联系方式</label>
+                <label for="zw3" class="layui-form-label">职务</label>
                 <div class="layui-input-inline">
-                    <input type="text" id="lxfs5" name="lxfs5" class="layui-input">
+                    <input type="text" id="zw3" name="zw3" class="layui-input">
                 </div>
             </div>
         </div>
 
         <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
-            <legend>工作简历（社会实践）</legend>
+            <legend>工作简历(社会实践)</legend>
         </fieldset>
         <div class="layui-form-item">
             <div class="layui-inline">
@@ -405,34 +404,7 @@
                 </div>
             </div>
         </div>
-        <div class="layui-form-item">
-            <div class="layui-inline">
-                <label for="qzsj4" class="layui-form-label">起止时间</label>
-                <div class="layui-input-inline">
-                    <input type="text" id="qzsj4" name="qzsj4" class="layui-input">
-                </div>
-            </div>
-            <div class="layui-inline">
-                <label for="gzjl4" class="layui-form-label">单位、岗位</label>
-                <div class="layui-input-inline">
-                    <input type="text" id="gzjl4" name="gzjl4" class="layui-input">
-                </div>
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <div class="layui-inline">
-                <label for="qzsj5" class="layui-form-label">起止时间</label>
-                <div class="layui-input-inline">
-                    <input type="text" id="qzsj5" name="qzsj5" class="layui-input">
-                </div>
-            </div>
-            <div class="layui-inline">
-                <label for="gzjl5" class="layui-form-label">单位、岗位</label>
-                <div class="layui-input-inline">
-                    <input type="text" id="gzjl5" name="gzjl5" class="layui-input">
-                </div>
-            </div>
-        </div>
+
         <div class="layui-form-item">
             <div class="layui-inline">
                 <label for="zmr1" class="layui-form-label">证明人</label>
@@ -589,19 +561,6 @@
 
         <div class="layui-form-item">
             <div class="layui-inline">
-                <label class="layui-form-label">公司内亲属</label>
-                <div class="layui-input-inline" id="IsPurchased" >
-                    <input type="radio"  name="zxqs" value="有" title="有" lay-filter="zxqs"/>
-                    <input type="radio"  name="zxqs" value="无" title="无" lay-filter="zxqs" checked/>
-                </div>
-                <div class="layui-input-inline">
-                    <input type="text" id="zxqsxm" style="display:none" name="zxqsxm" placeholder="亲属姓名" class="layui-input">
-                </div>
-            </div>
-        </div>
-
-        <div class="layui-form-item">
-            <div class="layui-inline">
                 <label for="sm1" class="layui-form-label">列举三本书</label>
                 <div class="layui-input-inline">
                     <input type="text" id="sm1" name="sm1" lay-verify="required" placeholder="最近您看的书名1" class="layui-input">
@@ -707,16 +666,6 @@
             }
         });
 
-        form.on('radio(zxqs)', function(){
-
-            if($('#IsPurchased input[name="zxqs"]:checked').val() === "无"){
-                $("#zxqsxm").hide();
-            }else{
-                $("#zxqsxm").show();
-            }
-
-        });
-
         $('input[name="sfzh"]').blur(function(){
             if($('input[name="sfzh"]').val() !== ''){
                 $.ajax({
@@ -736,36 +685,6 @@
                         }
                     }
                 });
-            }
-        });
-
-        // $('input[name="sj"]').blur(function(){
-        //     if($('input[name="sj"]').val() !== ''){
-        //         $.ajax({
-        //             type: 'post',
-        //             url: './searchSj', // ajax请求路径
-        //             // contentType: "application/json; charset=utf-8",
-        //             data: {
-        //                 "sj": $('input[name="sj"]').val()
-        //             },
-        //             dataType: "text",
-        //             success : function(data) {
-        //                 if (data.trim() === "error") {
-        //                     $('#sj').val("");
-        //                     layer.msg('该手机号已存在', {icon: 5});
-        //                 }
-        //             }
-        //         });
-        //     }
-        // });
-
-        // 失去焦点时判断值为空不验证，一旦填写必须验证
-        $('input[name="rdnyr"]').blur(function(){
-            //这里是失去焦点时的事件
-            if($('input[name="rdnyr"]').val()){
-                $('input[name="rdnyr"]').attr('lay-verify','date');
-            }else{
-                $('input[name="rdnyr"]').removeAttr('lay-verify');
             }
         });
 

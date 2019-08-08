@@ -45,5 +45,4 @@ public interface AdminService {
     void editPerson(User person, User u);
 
     void addPerson(User u);
-
 }

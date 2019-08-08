@@ -54,7 +54,7 @@
                 success: function(data){
                     if(data.trim() === "ok")
                     {
-                        location.href='./addPersonInfo';
+                        location.href='./addPersonInfo_znkg';
                     }
                     else
                     {

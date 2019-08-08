@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.admin.mapper.AdminMapper_znkg">
+
+    <update id="updatePersonInfo_znkg">
+        update recruitment.personInfo set
+            <!--所求职位1，所求职位2-->
+            sqzw1=#{personInfo.sqzw1},sqzw2=#{personInfo.sqzw2},
+            <!--民族-->
+            mz=#{personInfo.mz},
+            <!--出生年月，性别-->
+            csnyr=#{personInfo.csnyr},xb=#{personInfo.xb},
+            <!--身份证号，邮箱，婚否-->
+            sfzh=#{personInfo.sfzh},yx=#{personInfo.yx},hy=#{personInfo.hy},
+            <!--籍贯，学生职务-->
+            jg=#{personInfo.jg},bysgwzw=#{personInfo.bysgwzw},
+            <!--所求职位1，毕业院校，专业-->
+            zgxl=#{personInfo.zgxl},byyx=#{personInfo.byyx},zy=#{personInfo.zy},
+            <!--学制，学位，毕业年月日-->
+            xz=#{personInfo.xz},xw=#{personInfo.xw},bynyr=#{personInfo.bynyr},
+            <!--政治面貌，【职业资格证书】，技术职称-->
+            zzmm=#{personInfo.zzmm},zyzgzs=#{personInfo.zyzgzs},jszc=#{personInfo.jszc},
+            <!--第一外语级别，计算机水平，班级排名,【年级排名】-->
+            dywyjb=#{personInfo.dywyjb},jsjsp=#{personInfo.jsjsp},pm=#{personInfo.pm},pm2=#{personInfo.pm2},
+            <!--联系地址，家庭地址-->
+            lxdz=#{personInfo.lxdz},jtdz=#{personInfo.jtdz},
+            <!--身高，体重，兴趣爱好，【性格】-->
+            sg=#{personInfo.sg},tz=#{personInfo.tz},xqah=#{personInfo.xqah},xg=#{personInfo.xg},
+            <!--既往病史-->
+            jwbs=#{personInfo.jwbs},
+            qzsj1=#{personInfo.qzsj1},gzjl1=#{personInfo.gzjl1},
+            qzsj2=#{personInfo.qzsj2},gzjl2=#{personInfo.gzjl2},
+            qzsj3=#{personInfo.qzsj3},gzjl3=#{personInfo.gzjl3},
+            qzsj6=#{personInfo.qzsj6},xxjl6=#{personInfo.xxjl6},
+            qzsj7=#{personInfo.qzsj7},xxjl7=#{personInfo.xxjl7},
+            qzsj8=#{personInfo.qzsj8},xxjl8=#{personInfo.xxjl8},
+            zmr1=#{personInfo.zmr1},lxfs1=#{personInfo.lxfs1},
+            zmr2=#{personInfo.zmr2},lxfs2=#{personInfo.lxfs2},
+            <!--理由-->
+            ly=#{personInfo.ly},
+            <!--收入期望，可开始工作日期-->
+            srqw=#{personInfo.srqw},kksgzrq=#{personInfo.kksgzrq},
+            <!--晋升期望-->
+            jsqw=#{personInfo.jsqw},
+            <!--培训期望-->
+            pxqw=#{personInfo.pxqw},
+            <!--【职务1】，【职务2】，【职务3】-->
+            fq=#{personInfo.fq},gzdw1=#{personInfo.gzdw1},zw1=#{personInfo.zw1},
+            mq=#{personInfo.mq},gzdw2=#{personInfo.gzdw2},zw2=#{personInfo.zw2},
+            xmpo=#{personInfo.xmpo},gzdw3=#{personInfo.gzdw3},zw3=#{personInfo.zw3},
+            <!--考公情况，考研情况-->
+            kgqk=#{personInfo.kgqk},kyqk=#{personInfo.kyqk},
+            <!--书名1，书名2，书名3-->
+            sm1=#{personInfo.sm1},sm2=#{personInfo.sm2},sm3=#{personInfo.sm3},
+            <!--应聘公司-->
+            ypgs=#{personInfo.ypgs}
+        where xm=#{personInfo.xm} and sj=#{personInfo.sj}
+    </update>
+</mapper>

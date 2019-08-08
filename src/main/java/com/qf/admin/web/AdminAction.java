@@ -22,19 +22,20 @@ public class AdminAction {
     private AdminService adminService;
 
     //登陆，不单独写出来的话会一直重定向
-    @RequestMapping("/login")
+    @RequestMapping("/adminlogin")
     public String login() {
 
-        return "login";
+        return "adminlogin";
     }
 
     @RequestMapping("/logout")
     public String logout(HttpSession session){
 
         session.removeAttribute("user");
-        return "redirect:/login";
+        return "redirect:/adminlogin";
     }
 
+    //验证【管理员】登陆的账号密码
     @RequestMapping("/adminLogin")
     @ResponseBody
     public String login(@RequestBody Admin admin, HttpSession session) {
@@ -49,6 +50,7 @@ public class AdminAction {
         return "error";
     }
 
+    //验证【用户】登陆的账号密码
     @RequestMapping("/userLogin")
     @ResponseBody
     public String userLogin(@RequestBody User u, HttpSession session) {
@@ -76,11 +78,18 @@ public class AdminAction {
                 return path;
             }
             return "userlogin";
+        }else if(path.equals("addPersonInfo_znkg")){
+
+            User person = (User) session.getAttribute("person");
+            if(person!=null){
+                return path;
+            }
+            return "userlogin";
         }else if(path.equals("addPerson")){
             //增加应聘人员页面判断管理员是否登陆
             Admin admin = (Admin) session.getAttribute("user");
             if(admin == null){
-                return "login";
+                return "adminlogin";
             }
             return "addPerson";
         }
@@ -182,11 +191,14 @@ public class AdminAction {
     @ResponseBody
     public String addPersonInfo(@RequestBody PersonInfo personInfo){
 
+        //判断是否有提交码
         int sum = adminService.searchCode(personInfo.getCode());
 
         if(sum < 1){
+            //如果没有提交码
             return "codeMiss";
         }else{
+            //记录可提交次数
             int num = adminService.searchNum(personInfo.getCode());
             if(num<1){
                 return "useOff";
@@ -195,6 +207,7 @@ public class AdminAction {
 
         String strSfzh = adminService.searchSfzh(personInfo.getXm(),personInfo.getSj());
 
+        //存在身份证号说明已经填过了
         if(strSfzh != null && strSfzh.equals(personInfo.getSfzh())){
 
             adminService.savePersonInfo(personInfo);
