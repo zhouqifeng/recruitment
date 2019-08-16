@@ -60,7 +60,14 @@ public class AdminAction {
         if(person != null){
             session.setAttribute("person",person);
             session.setMaxInactiveInterval(15*60);
-            return "ok";
+            //判断应聘者的应聘公司，并跳到对应的填写界面
+            if("浙农控股集团有限公司".equals(person.getYpgs())){
+                return "addPersonInfo_znkg";
+            }
+            if("浙江农资集团投资发展有限公司".equals(person.getYpgs())){
+                return "addPersonInfo";
+            }
+            return "addPersonInfo";
         }
         return "error";
     }
@@ -71,18 +78,23 @@ public class AdminAction {
 
         if(adminService.searchPath(path) != null){
             return "userlogin";
+        }else if(path.equals("addPersonInfo_znkg")){
+            //在应聘者登陆的情况下，防止他跳到别的登记页面去
+            User person = (User) session.getAttribute("person");
+            if(person!=null){
+                if("浙农控股集团有限公司".equals(person.getYpgs())){
+                    return path;
+                }
+            }
+            return "userlogin";
         }else if(path.equals("addPersonInfo")){
 
             User person = (User) session.getAttribute("person");
-            if(person!=null){
-                return path;
-            }
-            return "userlogin";
-        }else if(path.equals("addPersonInfo_znkg")){
 
-            User person = (User) session.getAttribute("person");
             if(person!=null){
-                return path;
+                if("浙江农资集团投资发展有限公司".equals(person.getYpgs())){
+                    return path;
+                }
             }
             return "userlogin";
         }else if(path.equals("addPerson")){
@@ -211,6 +223,7 @@ public class AdminAction {
         if(strSfzh != null && strSfzh.equals(personInfo.getSfzh())){
 
             adminService.savePersonInfo(personInfo);
+            adminService.updateNum(personInfo.getCode());
             return "modify";
         }
 

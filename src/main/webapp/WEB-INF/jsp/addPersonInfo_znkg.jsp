@@ -404,6 +404,34 @@
                 </div>
             </div>
         </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label for="qzsj4" class="layui-form-label">起止时间</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="qzsj4" name="qzsj4" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label for="gzjl4" class="layui-form-label">单位、岗位</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="gzjl4" name="gzjl4" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label for="qzsj5" class="layui-form-label">起止时间</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="qzsj5" name="qzsj5" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label for="gzjl5" class="layui-form-label">单位、岗位</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="gzjl5" name="gzjl5" class="layui-input">
+                </div>
+            </div>
+        </div>
 
         <div class="layui-form-item">
             <div class="layui-inline">
@@ -561,6 +589,19 @@
 
         <div class="layui-form-item">
             <div class="layui-inline">
+                <label class="layui-form-label">公司内亲属</label>
+                <div class="layui-input-inline" id="IsPurchased">
+                    <input type="radio"  name="zxqs" value="有" title="有" lay-filter="zxqs"/>
+                    <input type="radio"  name="zxqs" value="无" title="无" lay-filter="zxqs" checked/>
+                </div>
+                <div class="layui-input-inline">
+                    <input type="text" id="zxqsxm" style="display:none" name="zxqsxm" placeholder="亲属姓名" class="layui-input">
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-inline">
                 <label for="sm1" class="layui-form-label">列举三本书</label>
                 <div class="layui-input-inline">
                     <input type="text" id="sm1" name="sm1" lay-verify="required" placeholder="最近您看的书名1" class="layui-input">
@@ -666,6 +707,16 @@
             }
         });
 
+        form.on('radio(zxqs)', function(){
+
+            if($('#IsPurchased input[name="zxqs"]:checked').val() === "无"){
+                $("#zxqsxm").hide();
+            }else{
+                $("#zxqsxm").show();
+            }
+
+        });
+
         $('input[name="sfzh"]').blur(function(){
             if($('input[name="sfzh"]').val() !== ''){
                 $.ajax({
@@ -699,7 +750,7 @@
             //发异步，把数据提交给后台
             $.ajax({
                 type: 'post',
-                url: './addPersonInfo', // ajax请求路径
+                url: './addPersonInfo_znkg', // ajax请求路径
                 contentType: "application/json; charset=utf-8",
                 data: JSON.stringify(f),
                 dataType: "text", // "text":返回纯文本字符串;"json":返回JSON数据

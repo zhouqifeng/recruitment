@@ -26,7 +26,7 @@
         <input name="sj" placeholder="手机号" type="password" lay-verify="required" class="layui-input">
         <hr class="hr15">
         <input class="loginin" value="登录" lay-submit lay-filter="login" style="width:100%;" type="submit">
-        <hr class="hr20" >
+        <hr class="hr20">
     </form>
 </div>
 
@@ -52,9 +52,9 @@
                 data: JSON.stringify(f),
                 dataType:"text",
                 success: function(data){
-                    if(data.trim() === "ok")
+                    if(data.trim() !== "error")
                     {
-                        location.href='./addPersonInfo_znkg';
+                        location.href='./' + data;
                     }
                     else
                     {

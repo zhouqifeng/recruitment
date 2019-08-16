@@ -42,6 +42,7 @@ public class AdminAction_znkg {
         if(strSfzh != null && strSfzh.equals(personInfo.getSfzh())){
 
             adminService_znkg.savePersonInfo_znkg(personInfo);
+            adminService.updateNum(personInfo.getCode());
             return "modify";
         }
 
